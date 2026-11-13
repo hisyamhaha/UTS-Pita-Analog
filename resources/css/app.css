@@ -1,0 +1,122 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --color-analog-parchment: #f9f5ed;
+    --color-analog-card: #f4ebd9;
+    --color-analog-card-hover: #faefe0;
+    --color-analog-dark: #241a14;
+    --color-analog-darker: #170f0b;
+    --color-analog-brown: #54392b;
+    --color-analog-brown-dark: #3a251b;
+    --color-analog-cream: #e7d8c0;
+    --color-analog-tan: #d2c0a5;
+    --color-analog-olive: #4f5d2f;
+    --color-analog-olive-light: #6b7e3e;
+    --color-analog-olive-dark: #384221;
+    --color-analog-amber: #c96b1b;
+    --color-analog-amber-light: #e0832d;
+    --color-analog-rust: #9e3820;
+    --color-analog-rust-light: #b9452a;
+    --color-analog-gold: #c89d38;
+
+    --font-mono: 'Space Mono', 'Courier New', Courier, monospace;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Custom Tape & Cassette Texture Patterns */
+.tape-stripes {
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(36, 26, 20, 0.04),
+        rgba(36, 26, 20, 0.04) 8px,
+        transparent 8px,
+        transparent 16px
+    );
+}
+
+.tape-label-bands {
+    background: linear-gradient(
+        180deg,
+        #c96b1b 0%,
+        #c96b1b 33.3%,
+        #e7d8c0 33.3%,
+        #e7d8c0 66.6%,
+        #4f5d2f 66.6%,
+        #4f5d2f 100%
+    );
+}
+
+.tape-magnetic-strip {
+    background: linear-gradient(
+        90deg,
+        #170f0b 0%,
+        #3a251b 25%,
+        #241a14 50%,
+        #3a251b 75%,
+        #170f0b 100%
+    );
+}
+
+/* Hard Retro Brutalist Shadows */
+.shadow-retro-sm {
+    box-shadow: 2px 2px 0px 0px #241a14;
+}
+
+.shadow-retro {
+    box-shadow: 4px 4px 0px 0px #241a14;
+}
+
+.shadow-retro-hover {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.shadow-retro-hover:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px 0px #241a14;
+}
+
+.shadow-retro-hover:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px #241a14;
+}
+
+.shadow-retro-lg {
+    box-shadow: 6px 6px 0px 0px #241a14;
+}
+
+.shadow-retro-xl {
+    box-shadow: 8px 8px 0px 0px #241a14;
+}
+
+/* Cassette Wheel Spin on Hover */
+@keyframes reel-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.group:hover .reel-spin {
+    animation: reel-spin 3s linear infinite;
+}
+
+/* VU Audio Meter Bars */
+.vu-bar {
+    display: inline-block;
+    width: 4px;
+    background-color: #4f5d2f;
+    border-radius: 1px;
+}
+.vu-bar.amber {
+    background-color: #c96b1b;
+}
+.vu-bar.red {
+    background-color: #9e3820;
+}
